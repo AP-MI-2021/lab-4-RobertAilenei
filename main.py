@@ -61,7 +61,10 @@ def get_numbers_with_int_part_div_of_fractional_part(lista):
                 rezult.append(start)
     return rezult
 
-
+def test_get_numbers_with_int_part_div_of_fractional_part():
+    assert get_numbers_with_int_part_div_of_fractional_part([1.5, 3.3, 8.0, 8.9]) == [1.5, 3.3]
+    assert get_numbers_with_int_part_div_of_fractional_part([2.6, 3.15, 15.17, 13.13]) == [2.6, 3.15, 13.13]
+    assert get_numbers_with_int_part_div_of_fractional_part([4.32, 54.108, 5.3]) == [4.32, 54.108]
 
 def main():
     while True:
@@ -86,6 +89,7 @@ def main():
          break
 
 
+test_get_numbers_with_int_part_div_of_fractional_part()
 test_interval_deschis()
 test_gaseste_partea_intreaga()
 main()
